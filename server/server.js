@@ -21,5 +21,5 @@ app.get('/',(req, res) => {
 
 //config server
 app.listen(5000, function(){
-    console.log("el servidor NODE está corriendo");
+    console.log("NODE server is running...");
 })

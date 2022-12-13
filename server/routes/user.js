@@ -23,4 +23,15 @@ router.get('/getproducts', async (req, res) => {
     }
 })
 
+//Get user by Id
+router.get('/getuserbyid/:id', async (req, res) => {
+    try{
+        const data = await userModel.findById(req.params.id);
+        res.json(data)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
+
 module.exports = router;
